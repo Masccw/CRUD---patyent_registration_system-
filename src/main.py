@@ -1,35 +1,44 @@
-# Biblioteca datetime para marca o horario da internacao
-from datetime import datetime as dt
+class Paciente():
+    def __init__(self, nome, cpf, datNasc, endereco):
+        self.nome = nome
+        self.cpf = cpf
+        self.datNasc = datNasc
+        self.endereco = endereco
 
-# Criacao de lista com 1 elemento senao ela nao existe
-lista = [{}]
+    def __str__(self):
+        return f"\nNome: {self.nome}\nCPF: {self.cpf}\nData de nascimento: {self.datNasc}\nEndereco: {self.endereco}\n"
 
-# Funcao Adicionar
-def Adicionar(nome):
-        lista.append(nome)
-
-# Funcao Listar
-def  Listar():
-    if lista:
-        for i, pessoa in enumerate(lista):
-            print(f"[{i}] - {pessoa}]") 
-    else:
-        print("Lista nao existe!")
+# Lista de Pacientes
+Lista = []
 
 
-#Rodar o programa
-while True:
-    print("\na - Adicionar novo paciente\nl - Listar pacientes\ns - sair")
-    opcao = input(str("\nDigite a opcao: ")).lower()
+#Funcoes Adicionar // CREATE
+def Adicionar():
 
-    if opcao == "a":
-        nomePaciente = input(str(("Digite o nome do paciente: ")))
-        Adicionar(nomePaciente)
-    
-    elif opcao == "l":
-         Listar()
+    nomeUsuario = input("Digite o nome: ").title()
+    cpf = int(input("Digite o cpf: "))
+    dataNasc = input("Digite o dataNasc: ")
+    endereco = input("Digite o Endereco: ")
 
-    elif opcao == "s":break
+    p1 = Paciente(nomeUsuario, cpf, dataNasc, endereco)
+    Lista.append(p1)
 
-    else:
-         print("Opcao invalida!")
+
+#Listagem de pacientes // READ
+def Listar():
+    for i, paciente in enumerate(Lista):
+        print(f"\n[{i}] | {paciente}\n")
+
+
+
+#Programa rodando
+while True: 
+    print("\n1 - Adicionar Paciente\n2 - Listar Pacientes\n3 - Sair")       
+    o = input(": ")
+    if o == "1":
+        Adicionar()
+    elif o == "2":
+        Listar()
+    elif o == "3":break
+
+
