@@ -10,7 +10,7 @@ def Adicionar(nome):
 def  Listar():
     if lista:
         for i, nome in enumerate(lista):
-            print(f"[{i} - {nome}]") 
+            print(f"[{i}] - {nome}]") 
     else:
         print("Lista nao existe!")
 
