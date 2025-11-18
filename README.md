@@ -60,14 +60,5 @@ Delete (Excluir)	Remover paciente do sistema	Excluir registros duplicados ou des
 <h3>7. Conclusão</h3>
 O CRUD de Pacientes é a fundação do sistema hospitalar. Com ele, é possível estruturar uma base de dados limpa e consistente, garantindo qualidade e confiabilidade das informações. Esse módulo isolado pode funcionar de forma independente e futuramente ser expandido para incluir outras tabelas (como consultas e procedimentos).
 
-CRUD---An-lise-e-Modelagem-de-Sistemas-/
-│
-├── src/
-│   ├── main.py               # Arquivo principal
-│   ├── CRUD_PACIENTE_UPE.docx
-│   ├── README.md
-│   ├── utils/   # Funções auxiliares
-│   │   ├── EntradaDados.py   # funcao da entrada cpf e data de nasc
-│   │   ├── crud.py # onde ta a funcao adicionar e listar
-│   │   ├── ClassePaciente.py # somente uma classe
+
 
