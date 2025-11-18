@@ -1,43 +1,14 @@
 # Biblioteca para marca o dia e hora
-from datetime import datetime as dt
+from datetime import datetime  as dt
 
-class Paciente():
-    def __init__(self, nome, cpf, datNasc, endereco, dia):
-        self.nome = nome
-        self.cpf = cpf
-        self.datNasc = datNasc
-        self.endereco = endereco
-        self.dia = dia
+# Importando funcoes criadas // Organizacao
+from utils.EntradaDados import pedir_cpf,pedir_data_nascimento
 
-    def __str__(self):
-        return f"\nNome: {self.nome}\nCPF: {self.cpf}\nData de nascimento: {self.datNasc}\nEndereco: {self.endereco}\nInternado: {self.dia}\n"
+# Classe Paciente importada
+from utils.classePaciente import Paciente
 
-# Lista de Pacientes
-Lista = []
-
-
-#Funcoes Adicionar // CREATE
-def Adicionar():
-
-    nomeUsuario = input("Digite o nome: ").title()
-    cpf = int(input("Digite o cpf: "))
-    dataNasc = input("Digite o dataNasc: ")
-    endereco = input("Digite o Endereco: ")
-
-    #Dia da atual da internacao
-    dia = dt.now().date()
-
-    #Objeto
-    p1 = Paciente(nomeUsuario, cpf, dataNasc, endereco, dia)
-    Lista.append(p1)
-
-
-#Listagem de pacientes // READ
-def Listar():
-    for i, paciente in enumerate(Lista):
-        print(f"\n[{i}] | {paciente}\n")
-
-
+# Importa CRUD origin
+from utils.crud import Adicionar,Listar
 
 #Programa rodando
 while True: 
