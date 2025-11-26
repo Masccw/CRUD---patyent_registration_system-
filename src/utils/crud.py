@@ -12,7 +12,7 @@ Lista = []
 # adicionar paciente // CREATE
 
 def Adicionar():
-    nomeUsuario = input("Digite o nome: ").title()
+    nomeUsuario = input("Digite o nome: ").title() 
     cpf = pedir_cpf()
     dataNasc = pedir_data_nascimento()
     endereco = input("Digite o Endereco: ")
@@ -30,6 +30,6 @@ def Adicionar():
 def Listar():
     if Lista:
         for i, paciente in enumerate(Lista):
-            print(f"\n[{i}] | {paciente}\n")
+            print(f"\n[{i}] | {paciente}\n") 
     else:
         print("nao existe lista!")
