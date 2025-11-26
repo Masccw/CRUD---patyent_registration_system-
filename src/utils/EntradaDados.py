@@ -1,12 +1,15 @@
 from datetime import datetime as dt
+from validate_docbr import CPF
 
 def pedir_cpf():
     while True:
-        try:
-            cpf = int(input("Digite o CPF: "))
-            return cpf
-        except ValueError:
-            print("Digite apenas números inteiros.\n")
+        cpf = CPF()
+        numero_cpf = input("Digite o CPF: ")
+        if cpf.validate(numero_cpf):
+            print(f"O CPF {numero_cpf} é válido.")        
+        else:
+            print(f"O CPF {numero_cpf} é inválido.")
+        return numero_cpf
 
 
 def pedir_data_nascimento():
@@ -17,3 +20,4 @@ def pedir_data_nascimento():
 
         except ValueError:
             print("Formato inválido! Use exatamente dd/mm/aaaa.\n")
+
