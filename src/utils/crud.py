@@ -38,13 +38,13 @@ def atualizar():
     
         for paciente in Lista:
             if cpf_alterar == paciente.cpf: 
-                print(f"Paciente encontrado: {paciente.nomeUsuario} ")
+                print(f"Paciente encontrado: {paciente.nome} ")
                 print("\nDeixe em branco para não alterar o campo\n")
                 
                 #.strip() remove espaços em branco no início e no fim de uma string.
-                novo_nome = str(input("Digite o novo nome: ")).strip.title()
+                novo_nome = str(input("Digite o novo nome: ")).strip().title()
                 if novo_nome:
-                     paciente.nomeUsuario = novo_nome
+                     paciente.nome = novo_nome
 
                 nova_data = pedir_data_nascimento()
                 if nova_data:
@@ -66,7 +66,7 @@ def remover():
     for paciente in Lista:
         if paciente.cpf == cpf_remove:
             Lista.remove(paciente)
-            print(f"Paciente {paciente.nomeUsuario} removido com sucesso")
+            print(f"Paciente {paciente.nome} removido com sucesso")
             return
     
     print("Paciente não encontrado")
