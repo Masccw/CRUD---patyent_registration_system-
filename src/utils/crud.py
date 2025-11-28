@@ -12,7 +12,11 @@ Lista = []
 # adicionar paciente // CREATE
 
 def Adicionar():
+    
     nomeUsuario = str(input("Digite o nome: ")).title() 
+    while nomeUsuario == "":
+        nomeUsuario = str(input("Digite o nome: ")).strip().title()
+
     cpf = pedir_cpf()
     dataNasc = pedir_data_nascimento()
     endereco = str(input("Digite o Endereco: "))
@@ -21,6 +25,9 @@ def Adicionar():
 
     #Objeto
     Lista.append(Paciente(nomeUsuario, cpf, dataNasc,  endereco, dia))
+
+    print(f"\nPaciente {nomeUsuario} adicionado com sucesso!\n")
+
 
 #Listagem de pacientes // READ
 def Listar():

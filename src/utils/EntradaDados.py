@@ -15,9 +15,14 @@ def pedir_cpf():
 def pedir_data_nascimento():
     while True:
         data = input("Data de nascimento (dd/mm/aaaa): ")
-        try:
-            return dt.strptime(data, "%d/%m/%Y").date()
+        if data == "":
+            return None
+        else:
+            try:
+                return dt.strptime(data, "%d/%m/%Y").date()
 
-        except ValueError:
-            print("Formato inválido! Use exatamente dd/mm/aaaa.\n")
+            except ValueError:
+                print("Formato inválido! Use exatamente dd/mm/aaaa.\n")
+
+# Validar data ----
 
