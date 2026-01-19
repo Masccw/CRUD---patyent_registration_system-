@@ -1,6 +1,6 @@
-<h1> CRUD---Análise-e-Modelagem-de-Sistemas- </h1>
+<h1> CRUD---Sistema de Cadastro de Pacientes </h1>
 
-<h2>Sistema de Cadastro de Pacientes — Projeto CRUD </h2>
+<h2> Projeto CRUD </h2>
 
 <h3> 1. Descrição do Problema </h3>
 O Complexo Hospitalar da Universidade de Pernambuco (UPE) realiza milhares de atendimentos e internações todos os anos. Para melhorar o controle das informações e garantir padronização, é necessário um sistema de cadastro de pacientes que permita registrar, visualizar, atualizar e excluir dados de forma organizada e segura.
