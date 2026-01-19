@@ -2,9 +2,7 @@ from django.core.exceptions import ValidationError
 from validate_docbr import CPF
 
 def validate_cpf(value):
-    # Remove tudo que não for número
+    cpf = CPF() 
 
-    cpf = CPF()  # ✅ instancia correta
-
-    if not cpf.validate(value):  # ✅ chamada correta
+    if not cpf.validate(value): 
         raise ValidationError('CPF inválido.')
